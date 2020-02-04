@@ -26,16 +26,32 @@ class MainBranchCollectionViewCell: UICollectionViewCell {
     }
     
     private func setUPViews() {
-        self.clipsToBounds = true
+
+        //이미지 그림자
+        contentView.backgroundColor = .clear
         
-        layer.cornerRadius = 20
+        layer.cornerRadius = 10
+//        layer.shadowColor = .init(srgbRed: 140, green: 140, blue: 140, alpha: 0.5)
+        layer.shadowColor = UIColor.darkGray.cgColor
+        layer.shadowRadius = 3              //그림자 크기
+        layer.shadowOffset = .zero          //위치 어느쪽으로 쏠릴지
+        layer.shadowOpacity = 0.5           //알파값 같은??
+        branchImage.layer.cornerRadius = 8
+        branchImage.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        
+        //이미지 라운드
+//        self.clipsToBounds = true
+//        branchImage.layer.cornerRadius = 8
+        
+        branchImage.layer.masksToBounds = true
         
         branchImage.contentMode = .scaleAspectFill
         contentView.addSubview(branchImage)
         
         branchName.textAlignment = .center
-        branchName.textColor = .darkGray
         branchName.font = UIFont.preferredFont(forTextStyle: .headline)
+        
+        branchName.textColor = .darkGray
         contentView.addSubview(branchName)
         
 //        branchName.textColor = .white
@@ -47,10 +63,13 @@ class MainBranchCollectionViewCell: UICollectionViewCell {
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
         
+        let labelHeight:CGFloat = 20
+        
         NSLayoutConstraint.activate([
             branchImage.topAnchor.constraint(equalTo: contentView.topAnchor),
             branchImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             branchImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            branchImage.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -labelHeight),
             /*branchImage.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)*/
             
            /* branchName.leadingAnchor.constraint(equalTo: branchImage.leadingAnchor),
@@ -61,7 +80,7 @@ class MainBranchCollectionViewCell: UICollectionViewCell {
             branchName.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             branchName.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             branchName.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            branchName.heightAnchor.constraint(equalToConstant: 20)
+            branchName.heightAnchor.constraint(equalToConstant: labelHeight)
             
         ])
         
