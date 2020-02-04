@@ -53,9 +53,7 @@ class MainBranchCollectionViewCell: UICollectionViewCell {
         
         branchName.textColor = .darkGray
         contentView.addSubview(branchName)
-        
-//        branchName.textColor = .white
-//        branchImage.addSubview(branchName)
+    
     }
     
     private func setUPConstraints() {
@@ -70,13 +68,6 @@ class MainBranchCollectionViewCell: UICollectionViewCell {
             branchImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             branchImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             branchImage.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -labelHeight),
-            /*branchImage.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)*/
-            
-           /* branchName.leadingAnchor.constraint(equalTo: branchImage.leadingAnchor),
-            branchName.trailingAnchor.constraint(equalTo: branchImage.trailingAnchor),
-            branchName.bottomAnchor.constraint(equalTo: branchImage.bottomAnchor),
-            branchName.heightAnchor.constraint(equalToConstant: 20),
-            */
             branchName.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             branchName.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             branchName.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
