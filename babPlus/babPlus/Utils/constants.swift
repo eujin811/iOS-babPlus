@@ -8,5 +8,7 @@
 
 import Foundation
 
- let mapCenterlat = 37.544792611423425//위도
- let mapCenterlon = 127.05570731194194//경도
+let mapCenterlat = 37.544792611423425//위도
+let mapCenterlon = 127.05570731194194//경도
+
+let testVaraiable = "123"
