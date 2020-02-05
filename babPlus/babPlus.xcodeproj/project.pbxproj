@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7CFF655423EA911600D63D86 /* RequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFF655323EA911600D63D86 /* RequestHelper.swift */; };
+		7CFF655623EA916200D63D86 /* BabplusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFF655523EA916200D63D86 /* BabplusModel.swift */; };
 		961C1B4323E85379009520A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961C1B4223E85379009520A5 /* AppDelegate.swift */; };
 		961C1B4523E85379009520A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961C1B4423E85379009520A5 /* SceneDelegate.swift */; };
 		961C1B4723E85379009520A5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961C1B4623E85379009520A5 /* MainViewController.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7CFF655323EA911600D63D86 /* RequestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHelper.swift; sourceTree = "<group>"; };
+		7CFF655523EA916200D63D86 /* BabplusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BabplusModel.swift; path = babPlus/Utils/BabplusModel.swift; sourceTree = SOURCE_ROOT; };
 		961C1B3F23E85379009520A5 /* babPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = babPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		961C1B4223E85379009520A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		961C1B4423E85379009520A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,7 +71,7 @@
 				961C1B4223E85379009520A5 /* AppDelegate.swift */,
 				961C1B4423E85379009520A5 /* SceneDelegate.swift */,
 				961C1B5F23EA8BDC009520A5 /* Utils */,
-				961C1B5623E855BA009520A5 /* Model */,
+				961C1B5623E855BA009520A5 /* Models */,
 				961C1B5823E855D6009520A5 /* View */,
 				961C1B5723E855C5009520A5 /* Controller */,
 				961C1B4823E85379009520A5 /* Main.storyboard */,
@@ -78,11 +82,12 @@
 			path = babPlus;
 			sourceTree = "<group>";
 		};
-		961C1B5623E855BA009520A5 /* Model */ = {
+		961C1B5623E855BA009520A5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7CFF655523EA916200D63D86 /* BabplusModel.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		961C1B5723E855C5009520A5 /* Controller */ = {
@@ -107,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				961C1B6023EA8C3B009520A5 /* constants.swift */,
+				7CFF655323EA911600D63D86 /* RequestHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -187,8 +193,10 @@
 				961C1B4723E85379009520A5 /* MainViewController.swift in Sources */,
 				961C1B6123EA8C3B009520A5 /* constants.swift in Sources */,
 				961C1B5E23E98831009520A5 /* MainBranchCollectionViewCell.swift in Sources */,
+				7CFF655623EA916200D63D86 /* BabplusModel.swift in Sources */,
 				961C1B4323E85379009520A5 /* AppDelegate.swift in Sources */,
 				961C1B4523E85379009520A5 /* SceneDelegate.swift in Sources */,
+				7CFF655423EA911600D63D86 /* RequestHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
