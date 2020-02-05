@@ -80,11 +80,18 @@ extension MainViewController: UICollectionViewDataSource {
     }
     
     
+    
+    
 }
 
 // MAKR: UICollectionViewDelegateFlowLayout
 extension MainViewController: UICollectionViewDelegateFlowLayout {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let branchDetailVC = BranchDetailViewController()
+        branchDetailVC.modalPresentationStyle = .fullScreen
+//        present(branchDetailVC ,animated: true)
+        self.navigationController?.pushViewController(branchDetailVC, animated: true)
+    }
 }
 
 // MARK: - UISearchBarDelegate

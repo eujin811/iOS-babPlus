@@ -16,6 +16,7 @@
 		961C1B5A23E8567C009520A5 /* BranchsAddressMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961C1B5923E8567C009520A5 /* BranchsAddressMapViewController.swift */; };
 		961C1B5C23E8583A009520A5 /* BranchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961C1B5B23E8583A009520A5 /* BranchDetailViewController.swift */; };
 		961C1B5E23E98831009520A5 /* MainBranchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961C1B5D23E98831009520A5 /* MainBranchCollectionViewCell.swift */; };
+		961C1B6123EA8C3B009520A5 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961C1B6023EA8C3B009520A5 /* constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		961C1B5923E8567C009520A5 /* BranchsAddressMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchsAddressMapViewController.swift; sourceTree = "<group>"; };
 		961C1B5B23E8583A009520A5 /* BranchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchDetailViewController.swift; sourceTree = "<group>"; };
 		961C1B5D23E98831009520A5 /* MainBranchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBranchCollectionViewCell.swift; sourceTree = "<group>"; };
+		961C1B6023EA8C3B009520A5 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			children = (
 				961C1B4223E85379009520A5 /* AppDelegate.swift */,
 				961C1B4423E85379009520A5 /* SceneDelegate.swift */,
+				961C1B5F23EA8BDC009520A5 /* Utils */,
 				961C1B5623E855BA009520A5 /* Model */,
 				961C1B5823E855D6009520A5 /* View */,
 				961C1B5723E855C5009520A5 /* Controller */,
@@ -98,6 +101,14 @@
 				961C1B5D23E98831009520A5 /* MainBranchCollectionViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		961C1B5F23EA8BDC009520A5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				961C1B6023EA8C3B009520A5 /* constants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +185,7 @@
 				961C1B5C23E8583A009520A5 /* BranchDetailViewController.swift in Sources */,
 				961C1B5A23E8567C009520A5 /* BranchsAddressMapViewController.swift in Sources */,
 				961C1B4723E85379009520A5 /* MainViewController.swift in Sources */,
+				961C1B6123EA8C3B009520A5 /* constants.swift in Sources */,
 				961C1B5E23E98831009520A5 /* MainBranchCollectionViewCell.swift in Sources */,
 				961C1B4323E85379009520A5 /* AppDelegate.swift in Sources */,
 				961C1B4523E85379009520A5 /* SceneDelegate.swift in Sources */,
