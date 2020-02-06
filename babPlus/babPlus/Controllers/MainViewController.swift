@@ -36,7 +36,7 @@ class MainViewController: UIViewController {
 //        guard let dataContents = data as! [String:[String:BabMenu.contents]] else { return }
         print("data")
         data.map { print("시작",$0) }
-        
+        //
 //        request()
         searchBarSet()
         setupCollectionView()
