@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: - BabMenu
-struct BabMenu: Decodable {
+struct BabMenu: Decodable {        
     let date: String
     let contents: [String: Content]
 }

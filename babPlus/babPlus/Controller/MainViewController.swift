@@ -9,6 +9,12 @@
 import UIKit
 
 class MainViewController: UIViewController {
+  
+//    let requestContants = RequestHelper().reqTask(path: "menu", method: "GET") {
+//        (result) in
+//        return result
+////        return result.contents
+//    }
     
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -19,11 +25,38 @@ class MainViewController: UIViewController {
     let branchImages = ["가게1", "가게2", "가게3", "가게4", "가게1", "가게2", "가게3", "가게4"]
     lazy var itemCount = branchImages.count
     
+    var tempData: BabMenu?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        print(requestContants)
+        request()
+        
         searchBarSet()
         setupCollectionView()
+        
+    }
+    
+    private func request() {
+        OperationQueue().addOperation {
+            RequestHelper().reqTask {
+                self.tempData = $0
+                dump(self.tempData)
+                
+                //            DispatchQueue.main.async {      //비동기 작업시 데이터를 가져오고 실제로 반영되는 ui작업한느 것들 DispatchMain에서 해줘야.
+                //                self.collectionView.reloadData()
+                //                print("request 완료", self.tempData ?? "실패")
+                //            }
+                OperationQueue.main.addOperation {
+                    print("완료",self.tempData!)
+                }
+            }
+        }
+
+        
+        
     }
     
     private func searchBarSet() {
