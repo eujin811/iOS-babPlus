@@ -30,6 +30,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let APPDELEGATE = UIApplication.shared.connectedScenes.first?.delegate as! SceneDelegate
         
 //        print(requestContants)
         request()
