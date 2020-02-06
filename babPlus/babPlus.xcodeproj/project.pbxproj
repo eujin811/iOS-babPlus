@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C64833423EBAD640011D1BB /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C64833323EBAD640011D1BB /* LaunchViewController.swift */; };
 		7CFF655423EA911600D63D86 /* RequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFF655323EA911600D63D86 /* RequestHelper.swift */; };
 		7CFF655623EA916200D63D86 /* BabplusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFF655523EA916200D63D86 /* BabplusModel.swift */; };
 		961C1B4323E85379009520A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961C1B4223E85379009520A5 /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C64833323EBAD640011D1BB /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		7CFF655323EA911600D63D86 /* RequestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHelper.swift; sourceTree = "<group>"; };
 		7CFF655523EA916200D63D86 /* BabplusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BabplusModel.swift; path = babPlus/Utils/BabplusModel.swift; sourceTree = SOURCE_ROOT; };
 		961C1B3F23E85379009520A5 /* babPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = babPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +98,7 @@
 				961C1B4623E85379009520A5 /* MainViewController.swift */,
 				961C1B5923E8567C009520A5 /* BranchsAddressMapViewController.swift */,
 				961C1B5B23E8583A009520A5 /* BranchDetailViewController.swift */,
+				7C64833323EBAD640011D1BB /* LaunchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				961C1B5C23E8583A009520A5 /* BranchDetailViewController.swift in Sources */,
+				7C64833423EBAD640011D1BB /* LaunchViewController.swift in Sources */,
 				961C1B5A23E8567C009520A5 /* BranchsAddressMapViewController.swift in Sources */,
 				961C1B4723E85379009520A5 /* MainViewController.swift in Sources */,
 				961C1B6123EA8C3B009520A5 /* constants.swift in Sources */,
