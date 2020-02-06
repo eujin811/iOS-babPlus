@@ -9,56 +9,58 @@
 import UIKit
 
 class MainViewController: UIViewController {
-  
-//    let requestContants = RequestHelper().reqTask(path: "menu", method: "GET") {
-//        (result) in
-//        return result
-////        return result.contents
-//    }
+
     
-    let searchController = UISearchController(searchResultsController: nil)
+    private let searchController = UISearchController(searchResultsController: nil)
     
-    let flowLayout = UICollectionViewFlowLayout()
+    private let flowLayout = UICollectionViewFlowLayout()
     lazy var collectionView = UICollectionView(frame: view.frame, collectionViewLayout: flowLayout)
     
-   
-    let branchImages = ["가게1", "가게2", "가게3", "가게4", "가게1", "가게2", "가게3", "가게4"]
+    
+    private var data:Any?
+    private let branchImages = ["가게1", "가게2", "가게3", "가게4", "가게1", "가게2", "가게3", "가게4"]
+    
     lazy var itemCount = branchImages.count
     
-    var tempData: BabMenu?
+//    var tempData: BabMenu?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
         let APPDELEGATE = UIApplication.shared.connectedScenes.first?.delegate as! SceneDelegate
+        data = APPDELEGATE.dummy!.self
         
-//        print(requestContants)
-        request()
+        print("data:",APPDELEGATE.dummy!.self)
+//        guard let dataContents = data as! [String:[String:BabMenu.contents]] else { return }
+        print("data")
+        data.map { print("시작",$0) }
         
+//        request()
         searchBarSet()
         setupCollectionView()
         
     }
     
-    private func request() {
-        OperationQueue().addOperation {
-            RequestHelper().reqTask {
-                self.tempData = $0
-                dump(self.tempData)
-                
-                //            DispatchQueue.main.async {      //비동기 작업시 데이터를 가져오고 실제로 반영되는 ui작업한느 것들 DispatchMain에서 해줘야.
-                //                self.collectionView.reloadData()
-                //                print("request 완료", self.tempData ?? "실패")
-                //            }
-                OperationQueue.main.addOperation {
-                    print("완료",self.tempData!)
-                }
-            }
-        }
-
-        
-        
-    }
+//    private func request() {
+//        OperationQueue().addOperation {
+//            RequestHelper().reqTask {
+//                self.tempData = $0
+//                dump(self.tempData)
+//
+//                //            DispatchQueue.main.async {      //비동기 작업시 데이터를 가져오고 실제로 반영되는 ui작업한느 것들 DispatchMain에서 해줘야.
+//                //                self.collectionView.reloadData()
+//                //                print("request 완료", self.tempData ?? "실패")
+//                //            }
+//                OperationQueue.main.addOperation {
+//                    print("완료",self.tempData!)
+//                }
+//            }
+//        }
+//
+//    }
+    
     
     private func searchBarSet() {
 //        searchController.searchBar.tintColor = .init(red: 255, green: 246, blue: 18, alpha: 1)
@@ -121,6 +123,7 @@ extension MainViewController: UICollectionViewDataSource {
 // MAKR: UICollectionViewDelegateFlowLayout
 extension MainViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         let branchDetailVC = BranchDetailViewController()
         branchDetailVC.modalPresentationStyle = .fullScreen
 //        present(branchDetailVC ,animated: true)
